@@ -1,0 +1,22 @@
+.chat-main 
+
+ .main-header 
+  .main-header__left-box
+   %h2.main-header__left-box__current-group グループ
+   %ul.main-header__left-box__member
+    Member : 
+    %li.main-header__left-box__member-name miho
+  = link_to "#" do
+   .main-header__edit-btn Edit
+  
+ .messages
+
+ .form
+  %form.new_message 
+   
+   .input-box
+    %input{type: "text", class: "input-box__text", placeholder: "type a message", name:"message[content]", id:"message_content"}
+    %label{class: "input-box__image", for: "message_image"}
+     = fa_icon "image"
+     %input{type: "file", class: "input-box__image__file", name: "message[image]", id:"message_image"}
+   %input{type: "submit", class: "submit-btn", name: "commit", value: "Send"}
