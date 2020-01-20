@@ -12,9 +12,18 @@
  *
  *= require_tree .
  *= require_self
- */
+ */ 
  @import "./reset";
+ @import "config/colors";
  @import "font-awesome-sprockets";
  @import "./font-awesome";
- @import "./chat-main";
+//  @import "./wrapper";
+//  @import "config/size";
+ @import "modules/flash";
+//  @import "mixins/mixin";
+//  @import "mixins/vendor_prefix";
  @import "./chat-side";
+ @import "./chat-main";
+ @import "modules/user";
+ @import  "./messages"
+ 

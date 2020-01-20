@@ -1,9 +1,7 @@
 .chat-main {
   height: 100vh;
   width: calc(100vw - 300px);
-  position: absolute;
-  right: 0;
-  top: 0;
+  float: left;
   .main-header {
     height: 100px ;
     display: flex;
