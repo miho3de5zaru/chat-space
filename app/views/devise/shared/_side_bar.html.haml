@@ -1,27 +1,33 @@
 .chat-side
-  .header
-    %h3.header__name
+  .side-header
+    %h3.side-header__box
       = current_user.name
-    %ul.header__lists
-      %li.list
-        = link_to "#" do
+    %ul.side-header__box__icon
+      %li.side-header__box__icon__group
+        = link_to new_group_path do
           = fa_icon "edit", class: 'icon'
-      %li.list
+      %li.side-header__box__icon__edit
         = link_to edit_user_path(current_user) do
           = fa_icon "cog", class: 'icon'
   .groups
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__group-name
+            = group.name
+          .group__latest-message
+            メッセージはまだありません。
+    -#   .group__name
+    -#     グループ名
+    -#   .group__message
+    -#     新着メッセージ
+    -# .group
+    -#   .group__name
+    -#     グループ名
+    -#   .group__message
+    -#     新着メッセージ
+    -# .group
+    -#   .group__name
+    -#     グループ名
+    -#   .group__message
+    -#     新着メッセージ
