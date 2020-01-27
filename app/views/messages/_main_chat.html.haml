@@ -8,8 +8,9 @@
         %li.main-header__left-box__member-name
           - @group.users.each do |user|
             %li= user.name
-    .main-header__edit-btn
-      = link_to "Edit"
+    .main-header__edit-btn 
+      = link_to "Edit", edit_group_path(@group)
+
     .messages
       = render @messages
 
