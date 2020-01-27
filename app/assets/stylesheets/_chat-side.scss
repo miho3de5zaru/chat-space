@@ -1,7 +1,10 @@
 .chat-side {
-  height: 100vh;
+  color: #ffffff;
   width: 300px;
   float: left;
+  a {
+    color: #ffffff; 
+  }
   .side-header {
     height: 100px;
     background-color: #253141;
@@ -12,16 +15,13 @@
       line-height: 20px;
       width: 100%;
       font-weight: bold;
-      color: #ffffff;
       display: flex;
       justify-content: space-between;
       &__icon {
         display: flex; 
         li {
-          margin-left: 5px;          
-          a {
-           color: #ffffff; 
-          }
+          margin-left: 0.3rem;
+          font-size: 16px;
         }
       }
     }
@@ -33,21 +33,21 @@
     .group {
       height: 85px;
       padding-bottom: 40px;
-      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      
      &__group-name {
        line-height: 23px;
        font-size: 15px;
-       color: #ffffff;
        padding-bottom: 5px;
        cursor: pointer;
-       
      }
      &__latest-message {
        line-height: 17px;
        font-size: 11px;
-       color: #ffffff;
        cursor: pointer;
-       
       }
     }
   }   
