@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     if ( message.image ) {
-      var html =
+      let html =
        `<div class="message" data-message-id=${message.id}>
           <div class="message__upper-info">
             <div class="message__upper-info__talker">
@@ -20,7 +20,7 @@ $(function(){
         </div>`
       return html;
     } else {
-      var html =
+      let html =
        `<div class="message" data-message-id=${message.id}>
           <div class="message__upper-info">
             <div class="message__upper-info__talker">
@@ -42,8 +42,8 @@ $(function(){
 
 $('#new_message').on('submit', function(e){
     e.preventDefault();
-    var formData = new FormData(this);
-    var url = $(this).attr('action');
+    let formData = new FormData(this);
+    let url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -53,7 +53,7 @@ $('#new_message').on('submit', function(e){
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data);
+      let html = buildHTML(data);
       $('.messages').append(html);      
       $('form')[0].reset();
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
